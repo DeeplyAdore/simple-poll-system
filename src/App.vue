@@ -11,7 +11,6 @@ import { IItem } from '@/models/item';
 const templateItems: IItem[] = [
   {
     id: 'q1',
-    title: 'What is your favorite pet?',
     options: ['Cats', 'Dogs', 'Birds']
   }
 ];
