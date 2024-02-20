@@ -32,7 +32,6 @@ const onSubmit = handleSubmit(async (values) => {
     pollItems: Object.entries(values).map((p: [string, string]) => [p[0], p[1]])
   };
   await apiService.addPoll(poll);
-  resetForm();
   toast.add({
     severity: 'success',
     summary: 'Success',
