@@ -1,7 +1,6 @@
 import { IItem } from '@/models/item';
 import { ICount } from '@/models/count';
 import { IPoll } from '@/models/poll';
-import { IListItem } from '@/models/list-item';
 
 export class APIService {
   public getPollCount = async (item: IItem, pollName: string): Promise<ICount[]> =>
