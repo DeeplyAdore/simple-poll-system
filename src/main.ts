@@ -14,7 +14,6 @@ import Button from 'primevue/button';
 import SelectButton from 'primevue/selectbutton';
 import Toast from 'primevue/toast';
 import ToastService from 'primevue/toastservice';
-import Column from 'primevue/column';
 
 // components
 import Form from '@/components/form/Form.vue';
@@ -34,7 +33,6 @@ app.component('Button', Button);
 app.component('SelectButton', SelectButton);
 app.component('Toast', Toast);
 app.use(ToastService);
-app.component('Column', Column);
 
 app.component('Form', Form);
 app.component('FormSelection', FormSelection);
