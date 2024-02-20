@@ -11,7 +11,7 @@ import 'primeflex/primeflex.scss';
 import '@/assets/app.scss';
 
 import Button from 'primevue/button';
-import SelectButton from 'primevue/selectbutton';
+import InputText from 'primevue/inputtext';
 import Toast from 'primevue/toast';
 import ToastService from 'primevue/toastservice';
 
@@ -30,7 +30,7 @@ const apiService = new APIService();
 app.provide('APIService', apiService);
 
 app.component('Button', Button);
-app.component('SelectButton', SelectButton);
+app.component('InputText', InputText);
 app.component('Toast', Toast);
 app.use(ToastService);
 
