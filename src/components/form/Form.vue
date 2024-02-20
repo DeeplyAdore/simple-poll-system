@@ -24,7 +24,7 @@ const props = defineProps(['modelValue']);
 const items = ref(props.modelValue);
 const apiService = inject<APIService>('APIService')!;
 
-const { handleSubmit, resetForm } = useForm();
+const { handleSubmit } = useForm();
 
 const onSubmit = handleSubmit(async (values) => {
   const poll: IPoll = {
