@@ -3,8 +3,4 @@ export interface IItem {
   type: string;
   title: string;
   options: string[];
-  result: {
-    type: string;
-    chartType: string;
-  };
 }
