@@ -1,11 +1,10 @@
 <template>
-  <SelectButton
+  <InputText
     :id="id"
     :name="id"
     v-model="value"
     :class="{ 'p-invalid': errorMessage }"
     aria-describedby="text-error"
-    :options="options"
   />
   <small id="text-error" class="p-error">{{ errorMessage || '&nbsp;' }}</small>
 </template>
