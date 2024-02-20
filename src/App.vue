@@ -1,12 +1,10 @@
 <template>
   <Form :modelValue="items"></Form>
   <hr />
-  <Result :modelValue="items"></Result>
 </template>
 
 <script setup lang="ts">
 import Form from '@/components/form/Form.vue';
-import Result from '@/components/result/Result.vue';
 import { ref } from 'vue';
 import { IItem } from '@/models/item';
 
