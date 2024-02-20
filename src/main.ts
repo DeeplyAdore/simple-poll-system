@@ -25,7 +25,6 @@ import Form from '@/components/form/Form.vue';
 import FormSelection from '@/components/form/FormSelection.vue';
 import Result from '@/components/result/Result.vue';
 import ResultChart from '@/components/result/ResultChart.vue';
-import ResultList from '@/components/result/ResultList.vue';
 
 import { APIService } from '@/services/APIService';
 
