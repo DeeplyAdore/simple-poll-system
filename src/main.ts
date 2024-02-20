@@ -15,7 +15,6 @@ import SelectButton from 'primevue/selectbutton';
 import Toast from 'primevue/toast';
 import ToastService from 'primevue/toastservice';
 import Column from 'primevue/column';
-import ColumnGroup from 'primevue/columngroup';
 import Row from 'primevue/row';
 
 // components
@@ -37,7 +36,6 @@ app.component('SelectButton', SelectButton);
 app.component('Toast', Toast);
 app.use(ToastService);
 app.component('Column', Column);
-app.component('ColumnGroup', ColumnGroup);
 app.component('Row', Row);
 
 app.component('Form', Form);
