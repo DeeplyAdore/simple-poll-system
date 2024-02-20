@@ -23,7 +23,6 @@ import Row from 'primevue/row';
 // components
 import Form from '@/components/form/Form.vue';
 import FormSelection from '@/components/form/FormSelection.vue';
-import Result from '@/components/result/Result.vue';
 
 import { APIService } from '@/services/APIService';
 
@@ -47,6 +46,5 @@ app.component('Row', Row);
 
 app.component('Form', Form);
 app.component('FormSelection', FormSelection);
-app.component('Result', Result);
 
 app.mount('#app');
