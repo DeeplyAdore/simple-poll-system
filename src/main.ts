@@ -37,7 +37,6 @@ app.component('Button', Button);
 app.component('SelectButton', SelectButton);
 app.component('Toast', Toast);
 app.use(ToastService);
-app.component('Chart', Chart);
 app.component('DataTable', DataTable);
 app.component('Column', Column);
 app.component('ColumnGroup', ColumnGroup);
