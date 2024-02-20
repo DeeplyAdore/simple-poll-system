@@ -9,11 +9,6 @@ export class APIService {
       (p: ICount) => item.options.includes(p.Value)
     );
 
-  public getPollList = async (pollName: string): Promise<IListItem[]> => {
-    const res = await (await fetch(`/api/poll/${pollName}?type=list`)).json();
-    return res.results;
-  };
-
   public addPoll = (poll: IPoll): Promise<Response> =>
     fetch(`/api/poll/${poll.pollName}`, {
       method: 'POST',
