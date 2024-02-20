@@ -15,7 +15,6 @@ import { useField } from 'vee-validate';
 
 const props = defineProps(['modelValue']);
 const id = ref(props.modelValue.id);
-const options = ref(props.modelValue.options);
 
 const { value, errorMessage } = useField<string>(id.value, validateField);
 
