@@ -14,7 +14,6 @@ import Button from 'primevue/button';
 import SelectButton from 'primevue/selectbutton';
 import Toast from 'primevue/toast';
 import ToastService from 'primevue/toastservice';
-import Chart from 'primevue/chart';
 import DataTable from 'primevue/datatable';
 import Column from 'primevue/column';
 import ColumnGroup from 'primevue/columngroup';
