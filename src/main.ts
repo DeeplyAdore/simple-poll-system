@@ -49,6 +49,5 @@ app.component('Row', Row);
 app.component('Form', Form);
 app.component('FormSelection', FormSelection);
 app.component('Result', Result);
-app.component('ResultChart', ResultChart);
 
 app.mount('#app');
