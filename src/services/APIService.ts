@@ -13,8 +13,8 @@ export class APIService {
     const res = await (await fetch(`/api/poll/${pollName}?type=list`)).json();
     return res.results;
   };
-  
-  public addPoll = (poll: IPoll): Promise<Response> =
+
+  public addPoll = (poll: IPoll): Promise<Response> =>
     fetch(`/api/poll/${poll.pollName}`, {
       method: 'POST',
       headers: {
