@@ -50,6 +50,5 @@ app.component('Form', Form);
 app.component('FormSelection', FormSelection);
 app.component('Result', Result);
 app.component('ResultChart', ResultChart);
-app.component('ResultList', ResultList);
 
 app.mount('#app');
