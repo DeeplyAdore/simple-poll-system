@@ -1,10 +1,4 @@
 <template>
-  <label
-    :for="id"
-    :class="['flex justify-content-center', { 'p-error': errorMessage }]"
-    v-text="title"
-  >
-  </label>
   <SelectButton
     :id="id"
     :name="id"
@@ -22,7 +16,6 @@ import { useField } from 'vee-validate';
 
 const props = defineProps(['modelValue']);
 const id = ref(props.modelValue.id);
-const title = ref(props.modelValue.title);
 const options = ref(props.modelValue.options);
 
 const { value, errorMessage } = useField<string>(id.value, validateField);
