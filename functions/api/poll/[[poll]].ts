@@ -27,13 +27,3 @@ const insertItems = (env: Env, poll: IPoll, ip: string): Promise<D1Result<never>
       ).bind(item[0], item[1], ip, new Date().toUTCString())
     )
   );
-
-const getGroupByAndCount = (env: Env, pollName: string, field: string) =>
-  env.SimplePollSystem.prepare(
-    `SELECT Value, COUNT(Value) AS Count FROM ${pollName} WHERE Key = ? GROUP BY Value`
-  )
-    .bind(field)
-    .all();
-
-const getAll = (env: Env, pollName: string) =>
-  env.SimplePollSystem.prepare(`SELECT Id, Key, Value, Time FROM ${pollName}`).all();
