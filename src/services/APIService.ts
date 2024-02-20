@@ -1,5 +1,3 @@
-import { IItem } from '@/models/item';
-import { ICount } from '@/models/count';
 import { IPoll } from '@/models/poll';
 
 export class APIService {
