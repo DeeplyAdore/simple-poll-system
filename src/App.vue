@@ -13,31 +13,7 @@ const templateItems: IItem[] = [
     id: 'q1',
     type: 'selection',
     title: 'What is your favorite pet?',
-    options: ['Cats', 'Dogs', 'Birds'],
-    result: {
-      type: 'chart',
-      chartType: 'doughnut'
-    }
-  },
-  {
-    id: 'q2',
-    type: 'selection',
-    title: 'What is your favorite color?',
-    options: ['Red', 'Blue', 'Green'],
-    result: {
-      type: 'chart',
-      chartType: 'doughnut'
-    }
-  },
-  {
-    id: 'q3',
-    type: 'selection',
-    title: 'What is your favorite food?',
-    options: ['Pizza', 'Pasta', 'Salad'],
-    result: {
-      type: 'chart',
-      chartType: 'doughnut'
-    }
+    options: ['Cats', 'Dogs', 'Birds']
   }
 ];
 const items = ref(templateItems);
