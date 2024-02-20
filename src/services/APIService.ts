@@ -1,7 +1,6 @@
 import { IPoll } from '@/models/poll';
 
 export class APIService {
-
   public addPoll = (poll: IPoll): Promise<Response> =
     fetch(`/api/poll/${poll.pollName}`, {
       method: 'POST',
