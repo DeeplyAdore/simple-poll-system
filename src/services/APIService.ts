@@ -3,11 +3,6 @@ import { ICount } from '@/models/count';
 import { IPoll } from '@/models/poll';
 
 export class APIService {
-  public getPollCount = async (item: IItem, pollName: string): Promise<ICount[]> =>
-    (await (await fetch(`/api/poll/${pollName}/${item.id}?type=count`)).json()).filter(
-      (p: ICount) => item.options.includes(p.Value)
-    );
-
   public addPoll = (poll: IPoll): Promise<Response> =>
     fetch(`/api/poll/${poll.pollName}`, {
       method: 'POST',
