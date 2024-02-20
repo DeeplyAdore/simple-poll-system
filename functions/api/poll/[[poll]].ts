@@ -8,25 +8,6 @@ export interface Env {
   SimplePollSystem: D1Database;
 }
 
-export const onRequestGet: PagesFunction<Env> = async (context) => {
-  const pollName = context.params.poll[0] || 'Poll1';
-  const field = context.params.poll[1];
-
-  const url = new URL(context.request.url);
-  const params = url.searchParams;
-
-  switch (params.get('type')) {
-    case 'count':
-      return new Response(
-        JSON.stringify((await getGroupByAndCount(context.env, pollName, field)).results)
-      );
-    case 'list':
-      return new Response(JSON.stringify(await getAll(context.env, pollName)));
-    default:
-      return new Response('Bad Request', { status: 400 });
-  }
-};
-
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   const poll = await context.request.json<IPoll>();
 
