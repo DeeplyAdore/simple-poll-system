@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import { IPoll } from '@/models/poll';
-import { useForm } from 'vee-validate';
+import { useField, useForm } from 'vee-validate';
 import { useToast } from 'primevue/usetoast';
 import { inject, ref } from 'vue';
 import { APIService } from '@/services/APIService';
