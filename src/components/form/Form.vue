@@ -3,7 +3,15 @@
   <div class="card flex justify-content-center">
     <form @submit="onSubmit" class="flex flex-column align-items-center gap-2">
       <template v-for="item in items" :key="item.id">
-        <FormSelection :modelValue="item"></FormSelection>
+        <input
+          :modelValue="item"
+    :id="id"
+    :name="id"
+    v-model="value"
+    :class="{ 'p-invalid': errorMessage }"
+    aria-describedby="text-error"
+  />
+  <small id="text-error" class="p-error">{{ errorMessage || '&nbsp;' }}</small>
       </template>
 
       <Button type="submit" label="Submit" />
@@ -21,7 +29,9 @@ import { APIService } from '@/services/APIService';
 
 const toast = useToast();
 const props = defineProps(['modelValue']);
+  const id = ref(props.modelValue.id);
 const items = ref(props.modelValue);
+  const { value, errorMessage } = useField<string>(id.value, validateField);
 const apiService = inject<APIService>('APIService')!;
 
 const { handleSubmit } = useForm();
@@ -39,6 +49,12 @@ const onSubmit = handleSubmit(async (values) => {
     life: 3000
   });
 });
+  function validateField(value: string) {
+  if (!value) {
+    return `This question is required.`;
+  }
+  return true;
+}
 </script>
 
 <style scoped></style>
