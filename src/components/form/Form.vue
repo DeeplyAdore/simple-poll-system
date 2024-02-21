@@ -4,6 +4,7 @@
     <form @submit="onSubmit" class="flex flex-column align-items-center gap-2">
       <template v-for="item in items" :key="item.id">
         <FormSelection :modelValue="item"></FormSelection>
+        <input :modelValue="item" />
       </template>
 
       <Button type="submit" label="Submit" />
