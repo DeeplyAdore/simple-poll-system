@@ -2,11 +2,9 @@
 <template>
   <div class="card flex justify-content-center">
     <form @submit="onSubmit" class="flex flex-column align-items-center gap-2">
-      <template v-for="item in items" :key="item.id">
+      <template v-for="item in items" >
         <input
           :modelValue="item"
-    :id="id"
-    :name="id"
     v-model="value"
     :class="{ 'p-invalid': errorMessage }"
     aria-describedby="text-error"
@@ -16,7 +14,6 @@
 
       <Button type="submit" label="Submit" />
     </form>
-    <Toast />
   </div>
 </template>
 
