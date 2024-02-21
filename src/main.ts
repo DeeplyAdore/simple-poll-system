@@ -18,9 +18,7 @@ import Form from '@/components/form/Form.vue';
 import { APIService } from '@/services/APIService';
 
 const app = createApp(App);
-app.use(PrimeVue, {
-  ripple: true
-});
+app.use(PrimeVue);
 
 const apiService = new APIService();
 app.provide('APIService', apiService);
