@@ -23,11 +23,9 @@
 <script setup lang="ts">
 import { IPoll } from '@/models/poll';
 import { useField, useForm } from 'vee-validate';
-import { useToast } from 'primevue/usetoast';
 import { inject, ref } from 'vue';
 import { APIService } from '@/services/APIService';
 
-const toast = useToast();
 const props = defineProps(['modelValue']);
   const id = ref(props.modelValue.id);
 const items = ref(props.modelValue);
@@ -42,12 +40,6 @@ const onSubmit = handleSubmit(async (values) => {
     pollItems: Object.entries(values).map((p: [string, string]) => [p[0], p[1]])
   };
   await apiService.addPoll(poll);
-  toast.add({
-    severity: 'success',
-    summary: 'Success',
-    detail: 'Your vote has been submitted.',
-    life: 3000
-  });
 });
   function validateField(value: string) {
   if (!value) {
