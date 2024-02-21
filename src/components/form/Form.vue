@@ -3,7 +3,8 @@
   <div class="card flex justify-content-center">
     <form @submit="onSubmit" class="flex flex-column align-items-center gap-2">
       <template v-for="item in items" :key="item.id">
-        <FormSelection :modelValue="item"></FormSelection>
+        <FormSelection></FormSelection>
+        <input id="emailAddress" type="email" :modelValue="item" />
       </template>
 
       <Button type="submit" label="Submit" />
