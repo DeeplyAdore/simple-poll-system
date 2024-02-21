@@ -1,5 +1,5 @@
 <template>
-  <Form :modelValue="items"></Form>
+  <Form></Form>
   <hr />
 </template>
 
