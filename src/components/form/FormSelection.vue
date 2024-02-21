@@ -1,5 +1,5 @@
 <template>
-  <InputText
+  <input
     :id="id"
     :name="id"
     v-model="value"
