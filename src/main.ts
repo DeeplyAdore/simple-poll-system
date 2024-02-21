@@ -16,7 +16,6 @@ import ToastService from 'primevue/toastservice';
 
 // components
 import Form from '@/components/form/Form.vue';
-import FormSelection from '@/components/form/FormSelection.vue';
 
 import { APIService } from '@/services/APIService';
 
@@ -33,6 +32,5 @@ app.component('Toast', Toast);
 app.use(ToastService);
 
 app.component('Form', Form);
-app.component('FormSelection', FormSelection);
 
 app.mount('#app');
