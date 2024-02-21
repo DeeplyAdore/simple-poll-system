@@ -11,8 +11,6 @@ import 'primeflex/primeflex.scss';
 import '@/assets/app.scss';
 
 import Button from 'primevue/button';
-import Toast from 'primevue/toast';
-import ToastService from 'primevue/toastservice';
 
 // components
 import Form from '@/components/form/Form.vue';
@@ -28,8 +26,6 @@ const apiService = new APIService();
 app.provide('APIService', apiService);
 
 app.component('Button', Button);
-app.component('Toast', Toast);
-app.use(ToastService);
 
 app.component('Form', Form);
 
